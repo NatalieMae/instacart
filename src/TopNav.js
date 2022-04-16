@@ -1,25 +1,43 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 // import Button from 'react-bootstrap/Button';
-
 function TopNav () {
     return (
-        <div>
-        <Navbar bg="light" expand="lg" >
-    <Navbar.Brand style={{margin: "5px 0 0 20px"}} href="#home">
-        <img src="[Instacart logo src]" /> 
-    </Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto"> 
-        </Nav>
-        <Nav>
-            <Nav.Link href="#LogIn">Log In</Nav.Link>
-            <Button variant="success">Sign Up</Button>{' '}
-        </Nav>
-    </Navbar.Collapse>
-</Navbar>
-</div>
-    )
-}
+        <div className="navigation">
+        <nav className="navbar navbar-expand navbar-dark bg-dark">
+          <div className="container">
+            <NavLink className="navbar-brand" to="/">
+              React Multi-Page Website
+            </NavLink>
+            <div>
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/">
+                    Home
+                    <span className="sr-only">(current)</span>
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/about">
+                    About
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/contact">
+                    Contact
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/blog">
+                    Blog
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    );
+  }
 
 export default TopNav;

@@ -1,10 +1,15 @@
 import React from 'react';
-import TopNav from './TopNav';
 import './App.css';
+import Nav from 'react-bootstrap/Nav'
+import Container from 'react-bootstrap/Container'
+import TopNav from './TopNav';
+import Home from './Home';
+
+
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <TopNav />
       <Home />
     </div>
